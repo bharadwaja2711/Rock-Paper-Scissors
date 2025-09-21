@@ -5,4 +5,4 @@ let getComputerChoice = () => {
     else return "Scissors"
 }
 
-console.log(getComputerChoice());
+console.log("Computer: " + getComputerChoice());
