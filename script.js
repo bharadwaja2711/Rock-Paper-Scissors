@@ -6,3 +6,12 @@ let getComputerChoice = () => {
 }
 
 console.log("Computer: " + getComputerChoice());
+
+let getHumanChoice = () => {
+    let choice = Number(prompt('Choose 1 - (Rock), 2 - (Paper), 3 - (Scissors)', 0));
+    if(choice === 1) return "Rock"
+    else if(choice === 2) return "Paper"
+    else return "Scissors"
+}
+
+console.log("User: " + getHumanChoice());
