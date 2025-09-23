@@ -12,7 +12,11 @@ let getHumanChoice = () => {
     let choice = Number(prompt('Choose 1 - (Rock), 2 - (Paper), 3 - (Scissors)'));
     if(choice === 1) return "Rock"
     else if(choice === 2) return "Paper"
-    else return "Scissors"
+    else if(choice === 3) return "Scissors"
+    else {
+        alert("Invalid input, Please try again");
+        return getHumanChoice();
+    }
 }
 
 function playRound(humanChoice, computerChoice) {
