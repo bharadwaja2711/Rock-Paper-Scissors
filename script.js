@@ -27,9 +27,19 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-console.log("User: ", humanSelection);
-console.log("Computer: ", computerSelection);
-console.log (playRound(humanSelection, computerSelection));
+function playGame() {
+    let rounds = Number(prompt("Enter how many rounds"));
+    while(rounds > 0) {
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        console.log("User:", humanSelection);
+        console.log("Computer:", computerSelection);
+        console.log(playRound(humanSelection, computerSelection));
+        rounds--;
+    }
+
+    console.log(`Final Score => You: ${humanScore} | Computer: ${computerScore}`);
+}
+
+playGame();
